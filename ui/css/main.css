@@ -113,6 +113,7 @@ input {
 
 span {
     letter-spacing: 2px;
+    cursor: pointer;
 }
 
 span a{
