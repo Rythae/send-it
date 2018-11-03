@@ -327,6 +327,44 @@ h4 {
     color: #ffffff;
 }
 
+#add-new {
+    width: 300px;
+    height: 18px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 100px;
+    background-color: steelblue;
+    color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.profile-1 div {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 25px;
+}
+
+.profile-1 h1 {
+    margin-left: 10px;
+    font-weight: 200;
+    font-size: 28px;
+}
+
+#profile-nav-2 {
+      float: left;
+      background: #cc004a;
+      position: relative;
+      top: 70px;
+      margin-left: 50px;
+      width: 50%;
+      height: 50px;
+      color: #ffffff;
+      font-size: 15px;
+      padding: 10px;
+}
+
+
 
 
 .caret {
