@@ -175,6 +175,160 @@ nav ul li a:hover {
 }
 
 
+#settings-2 ul li a{
+    display: block;
+    text-decoration: none;
+}
+
+#settings-2 ul li a:hover {
+    color: #ffffff;;
+}
+
+#settings-2 ul li ul{
+    display: none;
+    position: absolute;
+    background-color: rgb(211, 206, 206);
+    width: 100px;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+#settings-2 ul li:hover ul{
+    display: block;
+    
+}
+
+#settings-2 ul li ul li {
+    width: 180px;
+    border-radius: 4px;
+}
+
+#settings-2 ul li ul li a{
+    height: 15px;
+    padding: 0;
+}
+
+#settings-2 ul li ul li a:hover {
+    background-color: #333333;
+    opacity: 0.7;
+    padding: 2px;
+}
+
+#settings-3 ul li a{
+    display: block;
+    text-decoration: none;
+}
+
+#settings-3 ul li a:hover {
+    color: #ffffff;;
+}
+
+#settings-3 ul li ul{
+    display: none;
+    position: absolute;
+    background-color: #cc004a;
+    width: 100px;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+
+#settings-3 ul li:hover ul{
+    display: block;
+    
+}
+
+#settings-3 ul li ul li {
+    width: 180px;
+    border-radius: 4px;
+}
+
+#settings-3 ul li ul li a{
+    padding: 8px 14px;
+}
+
+#settings-3 ul li ul li a:hover {
+    background-color: gray;
+}
+
+#admin-1 {
+    width: 100%;
+    height: 120px;
+    background-color: steelblue;
+}
+
+#admin-dashboard {
+    background: rgb(211, 206, 206);;
+    position: relative;
+    top: 70px;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+#dash-nav-2 {
+    float: right;
+}
+
+#details-1 {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20%;
+}
+
+#container a{
+    color: #000000;
+    font-weight: 200;   
+}
+
+.middle-content {
+    background-color: #ffffff;
+    margin-top: 50px;
+    width: 1050px;
+    height: 800;
+  }
+
+  .middle-content div {
+      width: 200px;
+      padding: 50px;
+      margin: 20px 22px;
+      background: rgb(233, 230, 230);
+      display: inline-block;
+      text-align: center;
+  }
+
+  .middle-bottom {
+    background-color: #ffffff;
+    padding: 20px;
+  }
+
+  .middle-bottom h1 {
+    text-transform: uppercase;
+  }
+
+  .middle-bottom div {
+      display: inline-block;
+      margin-left: 70px;
+  }
+
+  #admin-2 {
+    margin: 0;
+    width: 220px;
+    height: 1080px;
+    background-color: #cc004a;
+}
+
+h4 {
+    background-color: steelblue;
+    width: 200px;
+    text-transform: uppercase;
+    margin-left: 0;
+    padding: 10px;
+    color: #ffffff;
+}
+
+
+
 .caret {
     position: relative;
     cursor: pointer;
