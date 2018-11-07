@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Send It</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="cssone/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
@@ -21,7 +20,7 @@
                             <ul>
                                <li><a href="#">Settings<span class="caret"></span></a>
                                    <ul>
-                                       <li><a href="update-profile.html">Profile</a></li>
+                                       <li><a href="user-profile.html">Profile</a></li>
                                        <li><a href="">Log out</a></li>
                                    </ul>
                                 </li>
@@ -32,26 +31,57 @@
 
         <section id="user">
             <div id="dashboard-2">
-            <nav id="dash-nav">
-                <ul>
-                    <li><a href="" id="dash">Dashboard</a></li>
-                    <li><a href="create.html">Create Parcel</a></li>
-                    <li><a href="parcel.html">Parcels</a></li>
-                </ul>
-            </nav>
+	            <nav id="dash-nav">
+	                <ul>
+	                    <li><a href="create.html">Create Parcel</a></li>
+	                    <li><a href="parcel.html">Parcels</a></li>
+	                </ul>
+	            </nav>
             </div>
         </section>
+    </div>
 
-        <section id="no-parcel">
-            <div>
-                <h1>No Parcels Created, Add Parcel</h1>
-            </div>
-            <a href="create.html"><i class="fas fa-plus"></i></a>
-        </section>
+    <section>
+    	<div>
+    	  <table class="parcel-table">
+			<thead>
+			  <tr>
+				<th>Company name</th>
+				<th>Name</th>
+				<th>Contact no</th>
+				<th>Email address</th>
+				<th>Address</th>
+				<th>City</th>
+				<th>Postcode</th>
+				<th>Country</th>
+				<th>Destination</th>
+				<th>Destination city</th>
+				<th>Postcode</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+			  	<td>Rodex &Co</td>
+				<td>Rita</td>
+				<td>012345678908</td>
+				<td>rythaeemili@yahoo.com</td>
+				<td>54, Billings way, Ikeja Lagos</td>
+				<td>Lagos</td>
+				<td>1001</td>
+				<td>Nigeria</td>
+				<th>Nigeria</th>
+				<th>Lagos</th>
+				<th>1001</th>
+				<td>
+					<a href="edit.html" class="green">Edit</a>
+					<a href="" class="cancelBtn">Cancel</a>
+				</td>
+			  </tr>
+			</tbody>
+		  </table>
+    	</div>
     </section>
-    
+ 
     <script src="js/main.js"></script>
-</body>
-</html>
 </body>
 </html>

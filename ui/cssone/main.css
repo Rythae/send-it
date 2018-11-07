@@ -106,10 +106,12 @@ nav ul li a:hover {
     color: #fff;
 }
 
+/* userDashboard begins */
+
 #dash-nav {
     float: left;
     margin-top: 15px; 
-    margin-left: 10px;
+    margin-left: 150px;
 }
 
 #dash-nav ul li a:hover {
@@ -117,6 +119,27 @@ nav ul li a:hover {
     opacity: 0.9;
 }
 
+#dash {
+    font-family: 'Lobster', cursive;
+    font-size: 22px;
+}
+
+.fa-plus {
+    margin-left: 80%;
+    background-color: steelblue;
+    border-radius: 50%;
+    padding: 2%;
+    color: #ffffff;
+}
+
+#no-parcel h1{
+    margin-top: 10%;
+    padding: 17px;
+    text-align: center;
+    text-transform: none;
+    font-size: 40px;
+    letter-spacing: 5px;
+}
 
 #user {
     width: 100%;
@@ -173,8 +196,10 @@ nav ul li a:hover {
 #settings ul li ul li a:hover {
     background-color: gray;
 }
+/* userDashboard ends */
 
 
+/* Admin begins */
 #settings-2 ul li a{
     display: block;
     text-decoration: none;
@@ -187,7 +212,7 @@ nav ul li a:hover {
 #settings-2 ul li ul{
     display: none;
     position: absolute;
-    background-color: rgb(211, 206, 206);
+    background-color: steelblue;
     width: 100px;
     padding: 10px;
     border-radius: 0px 0px 4px 4px;
@@ -214,41 +239,33 @@ nav ul li a:hover {
     padding: 2px;
 }
 
-#settings-3 ul li a{
+ #settings-3 {
     display: block;
-    text-decoration: none;
+    padding: 50px 20px; 
 }
+
+#settings-3 ul li{
+    padding: 12px; 
+    list-style-type: none;
+}
+
+
+#settings-3 span {
+    color: #ffffff;
+}
+
+.fa-cog {
+    color: #ffffff;
+}
+
+#settings-3 ul {
+    padding: 8px 14px;
+} 
 
 #settings-3 ul li a:hover {
-    color: #ffffff;;
-}
-
-#settings-3 ul li ul{
-    display: none;
-    position: absolute;
-    background-color: #cc004a;
-    width: 100px;
-    padding: 10px;
-    border-radius: 0px 0px 4px 4px;
-}
-
-#settings-3 ul li:hover ul{
-    display: block;
-    
-}
-
-#settings-3 ul li ul li {
-    width: 180px;
-    border-radius: 4px;
-}
-
-#settings-3 ul li ul li a{
-    padding: 8px 14px;
-}
-
-#settings-3 ul li ul li a:hover {
     background-color: gray;
-}
+} 
+
 
 #admin-1 {
     width: 100%;
@@ -257,7 +274,7 @@ nav ul li a:hover {
 }
 
 #admin-dashboard {
-    background: rgb(211, 206, 206);;
+    background: rgb(211, 206, 206);
     position: relative;
     top: 70px;
     margin-top: 0;
@@ -297,6 +314,10 @@ nav ul li a:hover {
       text-align: center;
   }
 
+  .middle-content p {
+      margin-top: 30%;
+  }
+
   .middle-bottom {
     background-color: #ffffff;
     padding: 20px;
@@ -308,14 +329,21 @@ nav ul li a:hover {
 
   .middle-bottom div {
       display: inline-block;
-      margin-left: 70px;
+  }
+
+  .middle-bottom table {
+      font-size: 15px;
+  }
+
+  .middle-bottom #table-two {
+    margin-left: 15%;
   }
 
   #admin-2 {
     margin: 0;
     width: 220px;
     height: 1080px;
-    background-color: #cc004a;
+    background-color: steelblue;
 }
 
 h4 {
@@ -327,6 +355,10 @@ h4 {
     color: #ffffff;
 }
 
+/* Admin ends */
+
+
+/* userProfile begins */
 #add-new {
     width: 300px;
     height: 18px;
@@ -337,6 +369,10 @@ h4 {
     color: #ffffff;
     border-radius: 3px;
     text-align: center;
+}
+
+#add-new .fa-plus {
+    margin-right: 40px;
 }
 
 .profile-1 div {
@@ -351,18 +387,120 @@ h4 {
     font-size: 28px;
 }
 
-#profile-nav-2 {
-      float: left;
-      background: #cc004a;
-      position: relative;
-      top: 70px;
-      margin-left: 50px;
-      width: 50%;
-      height: 50px;
-      color: #ffffff;
-      font-size: 15px;
-      padding: 10px;
+.profile-nav-2 {
+    width: 50%;
+    margin: 20px;
+    padding: 10px;
+    font-size: 15px;
 }
+
+.profile-nav-2 thead {
+    background: #cc004a;
+    color: #ffffff;
+}
+
+.profile-nav-2 th {
+    padding: 2%;
+}
+
+/* userProfile ends */
+
+
+input {
+	margin: 0 10%;
+}
+
+h1 {
+	text-transform: uppercase;
+}
+
+
+
+#createBtn {
+	width: 686px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+	margin-left: 12%;
+}
+
+label {
+  display: inline-block;
+  width: 140px;
+  text-align: right;
+}​
+
+#main-container-two {
+    width: 100%;
+    height: 100%;
+}
+
+#main-container-two .main-wrapper-two {
+    text-align: left;
+    padding-top: 50px;
+    margin-left: 150px;
+    margin-bottom: 50px;
+    font-weight: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+}
+
+.create-form {
+	background-color: rgb(233, 230, 230);
+	width: 50%;
+	margin-left: 12%;
+	margin-bottom: 1%;
+	padding-top: 1%;
+	padding-left: 1%;
+}
+
+select {
+	margin: 0 10%;
+}
+
+select {
+    width: 338px;
+    padding: 17px;
+}
+
+table th, table td {
+    padding-right: 10px;
+}
+
+td, th {
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+
+table {
+    text-align: left;
+    width: 100%;
+    border-spacing: 10px;
+    border-top: 1px solid rgb(255, 255, 255);
+    font-size: 12px;
+}
+
+.parcel-table td a {
+	color: #ffffff;
+	padding-left: 10px;
+}
+
+.green {
+	background-color: green;
+	border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.cancelBtn {
+    background-color: #cc004a;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+}
+
 
 
 
@@ -417,3 +555,5 @@ span a:hover{
 .main-form {
     margin-top: 20px;
 }
+
+
