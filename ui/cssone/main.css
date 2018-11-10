@@ -169,7 +169,8 @@ nav ul li a:hover {
 
 @media screen and (max-width: 600px) {
     #dash-nav li {
-        font-size: 13px;
+        font-size: 16px;
+        padding: 5px;
     }
 }
 
@@ -204,14 +205,40 @@ nav ul li a:hover {
     color: #ffffff;
 }
 
-#no-parcel h1{
+
+@media screen and (max-width: 600px) {
+    #no-parcel h1{
+        margin-top: 10%;
+        padding: 17px;
+        text-align: center;
+        text-transform: none;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    
+}
+
+
+@media screen and (min-width: 992px) {
+    #no-parcel h1{
+        margin-top: 10%;
+        padding: 17px;
+        text-align: center;
+        text-transform: none;
+        font-size: 40px;
+        letter-spacing: 5px;
+    }
+    
+}
+
+/* #no-parcel h1{
     margin-top: 10%;
     padding: 17px;
     text-align: center;
     text-transform: none;
     font-size: 40px;
     letter-spacing: 5px;
-}
+} */
 
 #user {
     width: 100%;
