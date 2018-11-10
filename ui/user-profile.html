@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Send It</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link href="css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cssone/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 <body>
@@ -20,9 +21,8 @@
                             <ul>
                                <li><a href="#">Hi, John Doe<span class="caret"></span></a>
                                    <ul>
-                                        <li><a href="">Add new parcel</a></li>
-                                       <li><a href="">Update profile</a></li>
-                                       <li><a href="">Details</a></li>
+                                        <li><a href="create.html">Add new parcel</a></li>
+                                       <li><a href="update-profile.html">Update profile</a></li>
                                        <li><a href="">Log out</a></li>
                                    </ul>
                                 </li>
@@ -35,9 +35,8 @@
             <div id="dashboard-2">
             <nav id="dash-nav">
                 <ul>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Parcels</a></li>
-                    <li><a href="">Profile</a></li>
+                    <li><a href="user-profile.html">Profile</a></li>
+                    <li><a href="parcel.html">Parcels</a></li>
                 </ul>
             </nav>
             </div>
@@ -49,24 +48,26 @@
             <h1>All your parcel delivery orders</h1>
             </div>
             <div id="add-new">
-                <span>Add new parcel</span>
+                <span>Add new parcel</span><a href="create.html"><i class="fas fa-plus"></i></a>
             </div>
         </div>
 
         <div id="profile-nav">
-            <nav id="profile-nav-2">
-                <ul>
-                    <li>Number of parcels delivered</li>
-                    <li>Number of pending deliveries</li>
-                </ul><br>
-                <ul>
-                    <li>9</li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <li>6</li>
-                </ul>
-            </nav>
+                <table class="profile-nav-2">
+                        <thead>
+                          <tr>
+                            <th>Number of parcels delivered</th>
+                            <th>Number of pending deliveries</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                 <td>10</td>
+                                 <td>7</td>
+                             </tr>
+                        </tbody>
+                </table>
+
         </div>
     </section>
 
