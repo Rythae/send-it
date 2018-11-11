@@ -17,3 +17,25 @@ describe('/GET /api/v1/parcels', () => {
         })
     })
 })
+
+describe('/GET /api/v1/parcels/:id', () => {
+    it('should return a specific parcel', (done) => {
+        request(server)
+        .get('/api/v1/parcels/1')
+        .end((err,res) => {
+            res.should.have.status(200);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 404 status when parcel not found', (done) => {
+        request(server)
+        .get('/api/v1/parcels/4')
+        .end((err,res) => {
+            res.should.have.status(404);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+})
