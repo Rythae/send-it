@@ -1,7 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import ParcelRoute from "./routes/route";
 
 const app = express();
+
+ParcelRoute(app);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
