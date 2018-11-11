@@ -1,0 +1,39 @@
+{
+  "name": "send-it",
+  "version": "1.0.0",
+  "description": "Delivery app",
+  "main": "./server/server.js",
+  "scripts": {
+    "start": "nodemon ./server/server.js --exec babel-node",
+    "test": "nyc mocha --require babel-core/register ./server/test/",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rythae/send-it.git"
+  },
+  "author": "Rythae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rythae/send-it/issues"
+  },
+  "homepage": "https://github.com/Rythae/send-it#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.2",
+    "nodemon": "^1.18.6",
+    "nyc": "^13.1.0"
+  }
+}
