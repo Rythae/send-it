@@ -11,14 +11,14 @@ const ParcelRoute = (app) => {
         ParcelControl.getSpecificParcel
     )
 
+    app.put(
+        '/api/v1/parcels/:id',
+        ParcelControl.updateParcelStatus
+    )
     app.post(
         '/api/v1/parcels',
         ParcelControl.createParcel
     )
-
-    
-
-
 }
 
 export default ParcelRoute;
