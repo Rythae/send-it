@@ -10,6 +10,11 @@ const ParcelRoute = (app) => {
         '/api/v1/parcels/:id',
         ParcelControl.getSpecificParcel
     )
+
+    app.put(
+        '/api/v1/parcels/:id',
+        ParcelControl.updateParcelStatus
+    )
 }
 
 export default ParcelRoute;
