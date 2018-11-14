@@ -38,7 +38,6 @@ describe('/GET /api/v1/parcels/:id', () => {
             done();
         })
     })
-
 })
 
 describe('/PUT /api/v1/parcels', () => {
@@ -82,4 +81,111 @@ describe('/PUT /api/v1/parcels', () => {
         })
    
 
+})
+
+describe('/POST /api/v1/parcels', () => {
+    it('should create a parcel', (done) => {
+        const parcel = {
+            title: "laptop",
+            price: 4000,
+            destination: "Abuja",
+            pickUpLocation: "Lagos",
+            presentLocation: "Benin",
+            status: "pending"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .send(parcel)
+        .end((err,res) => {
+            res.should.have.status(201);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 400 error, title field required', (done) => {
+        const parcel = {
+            price: 4000,
+            destination: "Abuja",
+            pickUpLocation: "Lagos",
+            presentLocation: "Benin",
+            status: "pending"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .send(parcel)
+        .end((err,res) => {
+            res.should.have.status(400);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 400 error, price field required', (done) => {
+        const parcel = {
+            title: "laptop",
+            destination: "Abuja",
+            pickUpLocation: "Lagos",
+            presentLocation: "Benin",
+            status: "pending"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .end((err,res) => {
+            res.should.have.status(400);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 400 error, destination field required', (done) => {
+        const parcel = {
+            title: "laptop",
+            pickUpLocation: "Lagos",
+            price: 5000,
+            presentLocation: "Benin",
+            status: "pending"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .end((err,res) => {
+            res.should.have.status(400);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 400 error, presentLocation field required', (done) => {
+        const parcel = {
+            title: "laptop",
+            pickUpLocation: "Lagos",
+            price: 5000,
+            destination: "Abuja",
+            status: "pending"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .end((err,res) => {
+            res.should.have.status(400);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
+
+    it('should return a 400 error, status field required', (done) => {
+        const parcel = {
+            title: "laptop",
+            pickUpLocation: "Lagos",
+            price: 5000,
+            destination: "Abuja",
+            presentLocation: "Ibadan"
+        }
+        request(server)
+        .post('/api/v1/parcels')
+        .end((err,res) => {
+            res.should.have.status(400);
+            res.body.should.be.a('object');
+            done();
+        })
+    })
 })

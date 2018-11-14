@@ -4,10 +4,11 @@ import ParcelRoute from "./routes/route";
 
 const app = express();
 
-ParcelRoute(app);
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
+
+
+ParcelRoute(app);
 
 const port = process.env.PORT || 5090;
 const server = app.listen(port, () => {console.log(` port ${port}`)});
