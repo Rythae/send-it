@@ -11,6 +11,11 @@ const ParcelRoute = (app) => {
         ParcelControl.getSpecificParcel
     )
 
+    app.get(
+        '/api/v1/users/:id',
+        ParcelControl.getAllUsersParcels
+    )
+
     app.put(
         '/api/v1/parcels/:id',
         ParcelControl.updateParcelStatus
