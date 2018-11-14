@@ -100,12 +100,29 @@ class ParcelControl {
           });
     }
 
-   
+    static getAllUsersParcels (req, resp) {
+
+        const userArray = [];
+
+        parcels.forEach((value, index) => {
+            if(value.user_id  === req.body.user_id){
+                userArray.push(value)
+                 return resp.status(200).send({
+                    status: 'success',
+                    message: 'All Parcel returned',
+                    parcel: userArray
+                });
+            }
+            return resp.status(200).send({
+                status: 'success',
+                message: 'All Parcel returned',
+                parcel: userArray
+            });
+
+        });
+        
+    }
+
 }
-
-
-
- 
-    
 
 export default ParcelControl;
