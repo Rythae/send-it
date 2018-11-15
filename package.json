@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "Delivery app",
   "main": "./server/server.js",
+  "engines": {
+    "node": "8.11.2"
+  },
   "scripts": {
-    "start": "nodemon ./server/server.js --exec babel-node",
+    "dev": "nodemon ./server/server.js --exec babel-node",
+    "start": "babel-node ./server/server.js",
     "test": "nyc mocha --require babel-core/register ./server/test/",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
