@@ -10,7 +10,7 @@ class ParcelControl {
     }
 
     static getSpecificParcel (req,resp) {
-        const parcel = parcels.find(c => c.id === parseInt(req.params.id));
+        const parcel = parcels.find(c => c.parcel_id === parseInt(req.params.id));
         if (!parcel) {
             return resp.status(404).send({
                 status: 'error',
@@ -24,7 +24,7 @@ class ParcelControl {
         });
     }
 
-    static updateParcelStatus (req,resp) {
+    static cancelParcel (req,resp) {
         console.log(req.body.status);
         const parcel = parcels.find(c => c.id === parseInt(req.params.id));
         if (!parcel) {
@@ -39,7 +39,7 @@ class ParcelControl {
                 message: 'Status field required'
             });
         }
-        parcels[req.params.id-1].status = req.body.status;
+        parcel.status = "cancelled";
         return resp.status(200).json({
             status: 'success',
             message: 'Parcel successfully updated',
@@ -49,6 +49,7 @@ class ParcelControl {
 
 
     static createParcel(req,resp) {
+        console.log(req.body)
         if(!req.body.title) {
             return resp.status(400).send({
               success: 'error',
@@ -101,28 +102,35 @@ class ParcelControl {
     }
 
     static getAllUsersParcels (req, resp) {
+       
+        const allParcels = parcels.filter(userParcels => userParcels.user_id === req.params.user_id) 
+                    return resp.status(200).json({
+                        status: 'success',
+                        message: 'All Parcel returned',
+                        parcels: allParcels
+                    });
+                }
+            
+    //     const userArray = []
+    //     parcels.forEach((value, index) => {
+    //         if(value.user_id  === req.body.user_id){
+    //             return userArray.push(value)
+    //              return resp.status(200).json({
+    //                 status: 'success',
+    //                 message: 'All Parcel returned',
+    //                 parcel: userArray
+    //             });
+    //         }
+    //         return resp.status(200).send({
+    //             status: 'success',
+    //             message: 'All Parcel returned',
+    //             parcel: userArray
+    //         });
 
-        const userArray = [];
-
-        parcels.forEach((value, index) => {
-            if(value.user_id  === req.body.user_id){
-                userArray.push(value)
-                 return resp.status(200).send({
-                    status: 'success',
-                    message: 'All Parcel returned',
-                    parcel: userArray
-                });
-            }
-            return resp.status(200).send({
-                status: 'success',
-                message: 'All Parcel returned',
-                parcel: userArray
-            });
-
-        });
+    //     });
         
-    }
+    // }
 
-}
+ }
 
 export default ParcelControl;

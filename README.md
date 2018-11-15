@@ -1,1 +1,30 @@
-# send-it
+
+
+# send-it #
+Send it fast is a delivery service app for a courier
+
+# **Getting Started** #
+## **Clone the Repo.** ##
+Run npm install to install all necessary packages.
+
+Prerequisites
+The following tools will be needed to run this application successfully:
+
+# Node v8.11.3 or above #
+# Npm v5.6 or above #
+
+# ENDPOINTS $
+
+GET /api/v1/parcels/:id User can get a specific parcel based on the id passed
+GET /api/v1/parcels/ User get all parcels 
+POST /api/v1/parcels Users can create a new parcel
+PUT //api/v1/parcels/:id Users can update the status of a parcel
+GET /api/v1/users/:id/parcels Users gets all parcels of a single user
+
+
+Authors
+Rythae Emili
+Acknowledgments
+The Andela Team
+google.com
+Andela cycle 38
