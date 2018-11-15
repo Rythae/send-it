@@ -1,3 +1,10 @@
+
+/* html, body {
+  width: auto !important;
+  overflow-x: hidden !important;
+}
+*/
+
 * {
     padding: 0;
     margin: 0;
@@ -9,6 +16,13 @@ a {
     text-decoration: none;
     transition: 0.3s all;
 }
+
+body{  
+    width: 100%;
+    min-height: 100%;      
+    padding-top: 60px;
+    padding-bottom: 40px;
+    }
 
 button {
     outline: none;
@@ -25,8 +39,85 @@ button {
     letter-spacing: 1px;
     cursor: pointer;
 }
+#center {
+    margin-top: 10px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#center p{
+    margin-top: 30px;
+    text-align: center;
+}
+
+footer {
+     width: 100%;
+     height: 70px;
+     position:absolute;
+     bottom:0;
+     width:100%;
+     height:60px;
+     position: fixed;    
+     background: #cc004a;
+     color: #fff;
+}
+
+ /*footer{
+        bottom: 0.5em;
+    }*/
+
 
 @media screen and (max-width: 600px) {
+    .fixed-header {
+     width: 100%;
+     height: 58px;
+     position: fixed;        
+     background: #cc004a;
+     padding: 10px 0;
+     margin: 0 3px;
+     color: #fff;
+}
+}
+
+@media screen and (min-width: 992px) {
+    .fixed-header {
+     width: 100%;
+     height: 58px;
+     position: fixed;        
+     background: #cc004a;
+     padding: 10px 0;
+     margin: 0;
+     color: #fff;
+}
+}
+
+/*.fixed-header {
+     width: 100%;
+     height: 45px;
+     position: fixed;        
+     background: #cc004a;
+     padding: 10px 0;
+     margin: 0 3px;
+     color: #fff;
+}*/
+
+@media screen and (max-width: 600px) {
+    .fixed-header{
+        top: 0;
+    }
+} 
+
+@media screen and (min-width: 992px) {
+    .fixed-header{
+        top: 0;
+    }
+} 
+ /*.fixed-header{
+        top: 0;
+    }*/
+
+
+/*@media screen and (max-width: 600px) {
     header {
     position: fixed;
     width: 100%;
@@ -43,7 +134,7 @@ button {
     color: #fff;
     z-index: 2;
 }
-}
+}*/
 
 /* header {
     position: fixed;
@@ -63,8 +154,9 @@ button {
     .logo {
     position: absolute;
     font-size: 1em;
-    margin-left: 2em;
-    margin-top: 1em;
+    margin-left: 2%;
+    margin-top: 0.5em;
+    padding-right: 2px;
 }
 }
 
@@ -72,14 +164,14 @@ button {
     .logo {
     position: absolute;
     font-size: 2em;
-    margin-left: 2em;
-    margin-top: 0.5em;
+    margin-left: 4.5em;
+    margin-top: 0;
 }
 }
 
 nav {
     float: right;
-    margin-top: 10px;
+    margin-top: 0x;
 }
 
 nav ul li {
@@ -87,9 +179,21 @@ nav ul li {
     padding-right: 50px;
 }
 
-nav ul li a:hover {
-    color: #cc004a;
+
+
+textarea{
+    margin-left: 11%;
 }
+
+
+.text p{
+    margin-bottom: 5px;
+    margin-left: 100px;
+}
+
+/*nav ul li a:hover {
+    color: #cc004a;
+}*/
 
 #home {
     position: absolute;
@@ -151,6 +255,7 @@ nav ul li a:hover {
         float: left;
         margin-top: 15px; 
         margin-left: 40px;
+        padding-top: 5px;
     }
 }
 
@@ -159,6 +264,7 @@ nav ul li a:hover {
         float: left;
         margin-top: 15px; 
         margin-left: 150px;
+        padding-bottom: 15px;
     }
 }
 /* #dash-nav {
@@ -167,12 +273,14 @@ nav ul li a:hover {
     margin-left: 150px;
 } */
 
-@media screen and (max-width: 600px) {
-    #dash-nav li {
+/*@media screen and (max-width: 600px) {
+    #dash-nav {
+        float: left;
         font-size: 16px;
         padding: 5px;
     }
-}
+}*/
+
 
 #dash-nav ul li a:hover {
     color: #333333;
@@ -199,6 +307,7 @@ nav ul li a:hover {
 
 .fa-plus {
     margin-left: 80%;
+    margin-bottom: 2%;
     background-color: steelblue;
     border-radius: 50%;
     padding: 2%;
@@ -207,26 +316,18 @@ nav ul li a:hover {
 
 
 @media screen and (max-width: 600px) {
-    #no-parcel h1{
-        margin-top: 10%;
+    #no-parcel {
+        margin-top: 2%;
         padding: 17px;
-        text-align: center;
-        text-transform: none;
-        font-size: 20px;
-        letter-spacing: 5px;
     }
     
 }
 
 
 @media screen and (min-width: 992px) {
-    #no-parcel h1{
-        margin-top: 10%;
+    #no-parcel {
+        margin-top: 2%;
         padding: 17px;
-        text-align: center;
-        text-transform: none;
-        font-size: 40px;
-        letter-spacing: 5px;
     }
     
 }
@@ -240,13 +341,13 @@ nav ul li a:hover {
     letter-spacing: 5px;
 } */
 
-#user {
+/*#user {
     width: 100%;
     height: 120px;
     background-color: steelblue;
-}
+}*/
 
- #dashboard-2 {
+/* #dashboard-2 {
     background: #cc004a;
     position: relative;
     top: 70px;
@@ -254,7 +355,7 @@ nav ul li a:hover {
     width: 100%;
     height: 50px;
     
-}
+}*/
 
 .settings {
     float: right;
@@ -387,8 +488,8 @@ nav ul li a:hover {
 }
 
 #details-1 {
-    position: absolute;
-    margin-top: 10px;
+    position: fixed;
+    margin-top: 15px;
     margin-left: 20%;
 }
 
@@ -511,12 +612,27 @@ nav ul li a:hover {
     margin-left: 15%;
   } */
 
-  #admin-2 {
-    margin: 0;
+ @media screen and (max-width: 600px) {
+    #admin-2 {
+    position: fixed;
+    margin: 8px 0;
     width: 220px;
     height: 1080px;
     background-color: steelblue;
 }
+}
+
+ @media screen and (min-width: 992px) {
+    #admin-2 {
+    position: fixed;
+    margin: 17px 0;
+    width: 220px;
+    height: 1080px;
+    background-color: steelblue;
+}
+}
+
+  
 
 h4 {
     background-color: steelblue;
@@ -634,17 +750,17 @@ h1 {
     #createBtn {
      width: 100%;
      margin-top: 1em;
-     margin-bottom: 1em;
-     margin-left: 2em;
+     margin-bottom: 2em;
+     margin-right: 1.1em;
  }
  }
  
  @media screen and (min-width: 992px) {
     #createBtn {
-     width: 50%;
+     width: 20%;
      margin-top: 1em;
-     margin-bottom: 1em;
-     margin-left: 22em;
+     margin-bottom: 8%;
+     margin-left: 35em;
  }
  }
 
@@ -667,13 +783,25 @@ label {
 }
 
 #main-container-two .main-wrapper-two {
-    text-align: left;
+   /* text-align: left;*/
     padding-top: 50px;
-    margin-left: 150px;
+    margin-left: 10%;
     margin-bottom: 50px;
     font-weight: none;
     letter-spacing: 3px;
     font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+   .main-wrapper-two h1 p{
+    text-align: left;
+    padding-top: 50px;
+    margin-left: 2em;
+    margin-bottom: 50px;
+    font-weight: none;
+    letter-spacing: 3px;
+    font-size: 20px;
+} 
 }
 
 
@@ -681,10 +809,8 @@ label {
     .create-form {
     background-color: rgb(233, 230, 230);
     width: 100%;
-    margin-left: 1em;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    padding-left: 1em;
+    padding-left: 2em;
+    padding-top: 10px;
 }
 }
 
@@ -698,6 +824,101 @@ label {
     padding-left: 1em;
 }
 }
+
+
+@media screen and (max-width: 600px) {
+    #main-select {
+    background-color: rgb(233, 230, 230);
+    width: 318px;
+    height: 10px;
+    margin-left: 0;
+    margin-bottom: 1em;
+    padding-top: 1em;
+    padding-left: 7em;
+}
+}
+
+/*@media screen and (max-width: 600px) {
+    .main-form {
+    background-color: rgb(233, 230, 230);
+    margin-right: 10%
+   
+}*/
+@media screen and (max-width: 600px) {
+    .main-wrapper {
+    margin-left: 30px;
+   
+}
+
+@media screen and (max-width: 600px) {
+    .main-wrapper button{
+    margin-left: 100px;
+   
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .main-form div{
+    background-color: rgb(233, 230, 230);
+    margin-right: 100%
+   
+}
+
+}
+@media screen and (max-width: 600px) {
+    .name {
+    width: 100%;
+    margin-right: 3em;
+    margin-bottom: 1em;
+}
+}
+
+@media screen and (max-width: 600px) {
+    .text {
+    width: 100%;
+    padding: 10px;
+    margin-right: 20px;
+
+}
+}
+
+@media screen and (max-width: 600px) {
+     textarea{
+    width: 100%;
+   /* padding-right: 10px;
+    margin-right: 100%;*/
+
+}
+}
+
+
+
+
+
+@media screen and (max-width: 600px) {
+    .form-label label {
+    background-color: rgb(233, 230, 230);
+    margin-right: 100px;
+   
+}
+}
+
+
+@media screen and (max-width: 600px) {
+    .create-form select {
+     width: 46%;
+     height: 24px;
+}
+}
+
+@media screen and (min-width: 992px) {
+    .create-form select {
+     width: 46%;
+     height: 24px;
+}
+}
+
 
 /* .create-form {
 	background-color: rgb(233, 230, 230);
@@ -755,19 +976,54 @@ td, th {
     font-size: 12px;
 } */
 
+@media screen and (max-width: 600px) {
+    .parcel-table a{
+     width: 100%;
+     height: 60px;
+     padding: 10px;
+     font-size: 10px;
+ }
+ 
+ }
+
 .parcel-table td a {
 	color: #ffffff;
 	padding-left: 10px;
 }
 
+@media screen and (max-width: 600px) {
 .green {
 	background-color: green;
 	border: none;
     border-radius: 3px;
     padding: 8px;
     cursor: pointer;
+    margin-bottom: 2em;
+}
 }
 
+@media screen and (min-width: 992px) {
+.green {
+    background-color: green;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+}
+}
+
+@media screen and (max-width: 600px) {
+.cancelBtn {
+    background-color: #cc004a;
+    border: none;
+    border-radius: 3px;
+    padding: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+}
+
+@media screen and (min-width: 992px) {
 .cancelBtn {
     background-color: #cc004a;
     border: none;
@@ -775,7 +1031,7 @@ td, th {
     padding: 8px;
     cursor: pointer;
 }
-
+}
 
 
 
@@ -831,4 +1087,45 @@ span a:hover{
     margin-top: 20px;
 }
 
+
+/*Cards */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 150
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
 

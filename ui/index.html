@@ -11,16 +11,27 @@
 <body>
 
     <section class="container">
-        <header>
+       <header class="fixed-header">
             <div class="logo">
                 <a href="index.html">Send-It</a>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="signup.html">Sign up</a></li>
-                    <li><a href="signin.html">Sign in</a></li>
-                </ul>
-            </nav>
+            <div class="settings">
+                    <nav id="settings">
+                            <ul>
+                               <li><a href="#">Settings<span class="caret"></span></a>
+                                   <ul>
+                                       <li><a href="user-profile.html">Profile</a></li>
+                                       <li><a href="">Log out</a></li>
+                                   </ul>
+                                </li>
+                           </ul>
+                      </nav>
+                      <nav id="dash-nav">
+                        <ul>
+                            <li><a href="parcel.html">Sign in</a></li>
+                        </ul>
+                    </nav>
+            <div>
         </header>
 
         <section id="home">
@@ -31,6 +42,13 @@
             </div>
         </section>
     </section>
+
+    <footer>
+            <div id="center" class="row">
+            <p>© 2018 Rythae</p>
+            <p><a href="contact.html">Contact Us</a></p> 
+            </div>
+    </footer>
     
     <script src="js/main.js"></script>
 </body>

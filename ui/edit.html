@@ -11,7 +11,7 @@
 <body>
 
     <section class="container">
-        <header>
+        <header class="fixed-header">
             <div class="logo">
                 <a href="index.html">Send-It</a>
             </div>
@@ -26,19 +26,25 @@
                                 </li>
                            </ul>
                       </nav>
+                      <nav id="dash-nav">
+		                <ul>
+		                    <li><a href="user-profile.html">Profile</a></li>
+		                    <li><a href="parcel.html">Parcels</a></li>
+		                </ul>
+		            </nav>
             <div>
         </header>
 
-        <section id="user">
-            <div id="dashboard-2">
-            <nav id="dash-nav">
+       <!--  <section id="user"> -->
+            <!-- <div id="dashboard-2"> -->
+            <!-- <nav id="dash-nav">
                 <ul>
                     <li><a href="user-profile.html">Profile</a></li>
-                    <li><a href="parcel.html">Parcels</a></li>
+                    <li><a href="index.html">Logout</a></li>
                 </ul>
-            </nav>
-            </div>
-        </section>
+            </nav> -->
+            <!-- </div>
+        </section> -->
 
         <section id="main-container-two">
 		<div class="main-wrapper-two">
@@ -46,39 +52,39 @@
 			<p>Delivery details</p>
 			</div>
 			<div class="create-form">
-				<h1>Change location details:</h1>
+				<h1>Change pick up location details:</h1>
 				<form class="main-form">
-					<div><label class="push"><b>Company name:</b></label>
+					<div class="form-label"><label class="name"><b>Company:</b></label>
 					<input type="text" name="first" placeholder="Company">
 					</div><br>
 
-					<div><label class="push"><b>Name:</b></label>
+					<div ><label class="name"><b>Name:</b></label>
 					<input type="text" name="first" placeholder="Name">
 					</div><br>
 
-					<div><label class="push"><b>Contact no: </b></label>
-					<input type="text" name="first" placeholder="+234567890">
+					<div><label class="name"><b>Contact_no: </b></label>
+					<input type="text" name="first" placeholder="+23456789990">
 					</div><br>
 
-					<div><label class="push"><b>Email address:</b></label>
+					<div><label class="name"><b>Email:</b></label>
 					<input type="text" name="first" placeholder="bobjohn#gmail.com">
 					</div><br>
 
-					<div><label class="push"><b>Address:</b></label>
-					<input type="text" name="first" placeholder="45,Lake avenue">
+					<div><label class="name"><b>Address:</b></label>
+					<input type="text" name="first" placeholder="22,Lake town">
 					</div><br>
 
 
-					<div><label class="push"><b>Town/City:</b></label>
+					<div><label class="name"><b>Town/City:</b></label>
 					<input type="text" name="first" placeholder="Lagos">
 					</div><br>
 
-					<div><label class="push"><b>Postcode/Zip:</b></label>
+					<div><label class="name"><b>Postcode/Zip:</b></label>
 					<input type="text" name="first" placeholder="1001">
 					</div><br>
 
-					<div><label class="push"><b>Country:</b></label>
-					<select name="country">
+					<div><label class="name"><b>Country:</b></label>
+					<select name="country" id="main-select">
 					<option value="">Country...</option>
 					<option value="Afganistan">Afghanistan</option>
 					<option value="Albania">Albania</option>
@@ -333,10 +339,10 @@
 			</div>
 			
 			<div class="create-form">
-			<h1>Change parcel destination:</h1>
-				<form>
-					<div><label class="push"><b>Country:</b></label>
-					<select name="country">
+			<h1>Change destination details:</h1>
+				<form class="main-form">
+					<div><label class="name"><b>Country:</b></label>
+					<select name="country" id="main-select">
 					<option value="">Country...</option>
 					<option value="Afganistan">Afghanistan</option>
 					<option value="Albania">Albania</option>
@@ -588,14 +594,19 @@
 					</select>
 					</div><br>
 
-					<div><label class="push"><b>City:</b></label>
+					<div><label class="name"><b>City:</b></label>
 					<input type="text" name="first" placeholder="Lagos">
 					</div><br>
 
-					<div><label class="push"><b>Postcode:</b></label>
-					<input type="text" name="first" placeholder="0112">
+					<div><label class="name"><b>Postcode:</b></label>
+					<input type="text" name="first" placeholder="1001">
 					</div><br>
 
+					<div class="text">
+					<p>Tell us about the parcel</p>
+					<textarea rows="10" cols="50">
+					</textarea>
+					</div><br>
 				</form>
 			</div>
 
@@ -605,6 +616,13 @@
 	</section>
 
     </section>
+
+     <footer>
+            <div id="center" class="row">
+            <p>© 2018 Rythae</p>
+            <p><a href="contact.html">Contact Us</a></p> 
+            </div>
+    </footer>   
     
     <script src="js/main.js"></script>
 </body>

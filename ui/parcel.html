@@ -11,7 +11,7 @@
 <body>
 
     <section class="container">
-        <header>
+       <header class="fixed-header">
             <div class="logo">
                 <a href="index.html">Send-It</a>
             </div>
@@ -26,10 +26,16 @@
                                 </li>
                            </ul>
                       </nav>
+                      <nav id="dash-nav">
+		                <ul>
+		                    <li><a href="create.html">Create Parcel</a></li>
+		                    <li><a href="parcel.html">Parcels</a></li>
+		                </ul>
+		            </nav>
             <div>
         </header>
 
-        <section id="user">
+        <!-- <section id="user">
             <div id="dashboard-2">
 	            <nav id="dash-nav">
 	                <ul>
@@ -39,10 +45,10 @@
 	            </nav>
             </div>
         </section>
-    </div>
+    </div> -->
 
     <section>
-    	<div>
+    	<div style="overflow-x:auto;">
     	  <table class="parcel-table">
 			<thead>
 			  <tr>
@@ -81,6 +87,13 @@
 		  </table>
     	</div>
     </section>
+
+     <footer>
+            <div id="center" class="row">
+            <p>© 2018 Rythae</p>
+            <p><a href="contact.html">Contact Us</a></p> 
+            </div>
+    </footer>   
  
     <script src="js/main.js"></script>
 </body>
