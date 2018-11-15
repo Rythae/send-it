@@ -40,48 +40,6 @@ describe('/GET /api/v1/parcels/:id', () => {
     })
 })
 
-describe('/PUT /api/v1/parcels', () => {
-        it('should update the status of a parcel', (done) => {
-            const obj = {
-                status: 'processing'
-            }
-            request(server)
-            .put('/api/v1/parcels/'+2)
-            .send(obj)
-            .end((err,res) => {
-                res.should.have.status(200);
-                res.body.should.be.a('object');
-                done();
-            })
-        })
-        it('should return a 404 error, parcel not found', (done) => {
-            const status = {
-                status: 'processing'
-            }
-            request(server)
-            .put('/api/v1/parcels/5')
-            .send(status)
-            .end((err,res) => {
-                res.should.have.status(404);
-                res.body.should.be.a('object');
-                done();
-            })
-        })
-        it('should return a 400 error, status field required', (done) => {
-            const status = {
-            }
-            request(server)
-            .put('/api/v1/parcels/1')
-            .send(status)
-            .end((err,res) => {
-                res.should.have.status(400);
-                res.body.should.be.a('object');
-                done();
-            })
-        })
-   
-
-})
 
 describe('/POST /api/v1/parcels', () => {
     it('should create a parcel', (done) => {
@@ -188,4 +146,49 @@ describe('/POST /api/v1/parcels', () => {
             done();
         })
     })
+
+describe('/PUT /api/v1/parcels', () => {
+        it('should update the status of a parcel', (done) => {
+            const obj = {
+                status: 'processing'
+            }
+            request(server)
+            .put('/api/v1/parcels/'+2)
+            .send(obj)
+            .end((err,res) => {
+                res.should.have.status(200);
+                res.body.should.be.a('object');
+                done();
+            })
+        })
+        it('should return a 404 error, parcel not found', (done) => {
+            const status = {
+                status: 'processing'
+            }
+            request(server)
+            .put('/api/v1/parcels/5')
+            .send(status)
+            .end((err,res) => {
+                res.should.have.status(404);
+                res.body.should.be.a('object');
+                done();
+            })
+        })
+        it('should return a 400 error, status field required', (done) => {
+            const status = {
+            }
+            request(server)
+            .put('/api/v1/parcels/1')
+            .send(status)
+            .end((err,res) => {
+                res.should.have.status(400);
+                res.body.should.be.a('object');
+                done();
+            })
+        })
+   
+
+})
+
+
 })

@@ -12,13 +12,13 @@ const ParcelRoute = (app) => {
     )
 
     app.get(
-        '/api/v1/users/:id',
+        '/api/v1/users/:id/parcels',
         ParcelControl.getAllUsersParcels
     )
 
     app.put(
-        '/api/v1/parcels/:id',
-        ParcelControl.updateParcelStatus
+        '/api/v1/parcels/:id/cancel',
+        ParcelControl.cancelParcel
     )
     app.post(
         '/api/v1/parcels',
