@@ -53,20 +53,6 @@ describe('/GET /api/v1/users/:id/parcels', () => {
 });
 
 describe('/PUT /api/v1/parcels/:id/status', () => {
-    // it('should update the status of a parcel', (done) => {
-    //     const status = {
-    //         status: 'processing'
-    //     }
-    //     request(server)
-    //     .put('api/v1/parcels/2/status')
-    //     .send(status)
-    //     .end((err,res) => {
-    //         res.should.have.status(200);
-    //         res.body.should.be.a('object');
-    //         done();
-    //     });
-    // });
-    
     it('should return a 404 error, parcel not found', (done) => {
         const status = {
             status: 'processing'
