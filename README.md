@@ -2,7 +2,7 @@
 
 # send-it #
 Send it fast is a delivery service app for a courier
-[![Build Status](https://travis-ci.org/Rythae/send-it.svg?branch=ch-integrating-travis)](https://travis-ci.org/Rythae/send-it)
+[![Build Status](https://travis-ci.org/Rythae/send-it.svg?branch=develop)](https://travis-ci.org/Rythae/send-it)
 
 # **Getting Started** #
 ## **Clone the Repo.** ##
