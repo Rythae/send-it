@@ -20,6 +20,11 @@ const ParcelRoute = (app) => {
         '/api/v1/parcels/:id/cancel',
         ParcelControl.cancelParcel
     )
+
+    app.put(
+        '/api/v1/parcels/:id/status',
+        ParcelControl.changeParcelStatus
+    )
     app.post(
         '/api/v1/parcels',
         ParcelControl.createParcel
