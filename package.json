@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "nodemon ./server/server.js --exec babel-node",
     "start": "babel-node ./server/server.js",
+    "lint": "eslint \"server/**/*.js\" --fix",
     "test": "nyc mocha --require babel-core/register ./server/test/",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
@@ -32,6 +33,9 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "express": "^4.16.4",
     "mocha": "^5.2.0"
   },

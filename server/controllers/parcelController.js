@@ -1,14 +1,31 @@
 import parcels from "../models/parcels";
 
+/**
+ * @exports
+ * @class ParcelControl
+ * 
+ */
 class ParcelControl {
+    /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static getAllParcel (req,resp) {
         return resp.status(200).send({
             status: 'success',
             message: 'Parcels returned successfully',
             parcels: parcels
-        })
+        });
     }
 
+     /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static getSpecificParcel (req,resp) {
         const parcel = parcels.find(c => c.id === parseInt(req.params.id));
         if (!parcel) {
@@ -23,9 +40,16 @@ class ParcelControl {
             parcel: parcel
         });
     }
-    
+
+    /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static getAllUsersParcels (req, resp) {    
-        const allParcels = parcels.filter(userParcels => userParcels.user_id === req.params.user_id) 
+        const userId = Number(req.params.id);
+        const allParcels = parcels.filter(parcel => parcel.userId === userId); 
                     return resp.status(200).json({
                         status: 'success',
                         message: 'All Parcel returned',
@@ -33,7 +57,12 @@ class ParcelControl {
                     });
     }
 
-
+     /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static createParcel(req,resp) {
         if(!req.body.title) {
             return resp.status(400).send({
@@ -78,7 +107,7 @@ class ParcelControl {
             pickUpLocation: req.body.pickUpLocation,
             presentLocation: req.body.presentLocation,
             status: req.body.status
-        }
+        };
         parcels.push(parcel);
         return resp.status(201).send({
             success: 'true',
@@ -87,6 +116,12 @@ class ParcelControl {
         });
     }
 
+    /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static cancelParcel (req,resp) {
         const parcel = parcels.find(c => c.id === parseInt(req.params.id));
         if (!parcel) {
@@ -108,6 +143,13 @@ class ParcelControl {
             parcel: parcel
         });
     }
+
+     /**
+     * @staticmethod
+     * @param {object} req - Request object
+     * @param {object} resp - Response object
+     * @return {json} resp.json
+     */
     static changeParcelStatus (req,resp) {
         const parcel = parcels.find(c => c.id === parseInt(req.params.id));
         if (!parcel) {

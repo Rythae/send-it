@@ -14,9 +14,9 @@ describe('/GET /api/v1/parcels', () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             done();
-        })
-    })
-})
+        });
+    });
+});
 
 describe('/GET /api/v1/parcels/:id', () => {
     it('should return a specific parcel', (done) => {
@@ -26,8 +26,8 @@ describe('/GET /api/v1/parcels/:id', () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 
     it('should return a 404 status when parcel not found', (done) => {
         request(server)
@@ -36,9 +36,9 @@ describe('/GET /api/v1/parcels/:id', () => {
             res.should.have.status(404);
             res.body.should.be.a('object');
             done();
-        })
-    })
-})
+        });
+    });
+});
 
 describe('/GET /api/v1/users/:id/parcels', () => {
     it('should return all parcels', (done) => {
@@ -48,9 +48,9 @@ describe('/GET /api/v1/users/:id/parcels', () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             done();
-        })
-    })
-})
+        });
+    });
+});
 
 describe('/PUT /api/v1/parcels/:id/status', () => {
     // it('should update the status of a parcel', (done) => {
@@ -70,7 +70,7 @@ describe('/PUT /api/v1/parcels/:id/status', () => {
     it('should return a 404 error, parcel not found', (done) => {
         const status = {
             status: 'processing'
-        }
+        };
         request(server)
         .put('/api/v1/parcels/3/status')
         .send(status)
@@ -78,11 +78,11 @@ describe('/PUT /api/v1/parcels/:id/status', () => {
             res.should.have.status(404);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
     it('should return a 400 error, status field required', (done) => {
         const status = {
-        }
+        };
         request(server)
         .put('/api/v1/parcels/7/status')
         .send(status)
@@ -90,8 +90,8 @@ describe('/PUT /api/v1/parcels/:id/status', () => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 });
 
 describe('/POST /api/v1/parcels', () => {
@@ -103,7 +103,7 @@ describe('/POST /api/v1/parcels', () => {
             pickUpLocation: "Lagos",
             presentLocation: "Benin",
             status: "pending"
-        }
+        };
         request(server)
             .post('/api/v1/parcels')
             .send(parcel)
@@ -120,7 +120,7 @@ describe('/POST /api/v1/parcels', () => {
             pickUpLocation: "Lagos",
             presentLocation: "Benin",
             status: "pending"
-        }
+        };
         request(server)
         .post('/api/v1/parcels')
         .send(parcel)
@@ -128,8 +128,8 @@ describe('/POST /api/v1/parcels', () => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 
     it('should return a 400 error, price field required', (done) => {
         const parcel = {
@@ -138,15 +138,15 @@ describe('/POST /api/v1/parcels', () => {
             pickUpLocation: "Lagos",
             presentLocation: "Benin",
             status: "pending"
-        }
+        };
         request(server)
         .post('/api/v1/parcels')
         .end((err,res) => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 
     it('should return a 400 error, destination field required', (done) => {
         const parcel = {
@@ -155,15 +155,15 @@ describe('/POST /api/v1/parcels', () => {
             price: 5000,
             presentLocation: "Benin",
             status: "pending"
-        }
+        };
         request(server)
         .post('/api/v1/parcels')
         .end((err,res) => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 
     it('should return a 400 error, presentLocation field required', (done) => {
         const parcel = {
@@ -172,15 +172,15 @@ describe('/POST /api/v1/parcels', () => {
             price: 5000,
             destination: "Abuja",
             status: "pending"
-        }
+        };
         request(server)
         .post('/api/v1/parcels')
         .end((err,res) => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 
     it('should return a 400 error, status field required', (done) => {
         const parcel = {
@@ -189,14 +189,14 @@ describe('/POST /api/v1/parcels', () => {
             price: 5000,
             destination: "Abuja",
             presentLocation: "Ibadan"
-        }
+        };
         request(server)
         .post('/api/v1/parcels')
         .end((err,res) => {
             res.should.have.status(400);
             res.body.should.be.a('object');
             done();
-        })
-    })
+        });
+    });
 });
 
