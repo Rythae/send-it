@@ -252,10 +252,10 @@ textarea{
 
 @media screen and (max-width: 600px) {
     #dash-nav {
-        float: left;
-        margin-top: 15px; 
-        margin-left: 40px;
-        padding-top: 5px;
+        float: right;
+        margin-top: 0; 
+        margin-right: 80%;
+        padding: 0;
     }
 }
 
@@ -861,7 +861,7 @@ label {
 @media screen and (max-width: 600px) {
     .main-form div{
     background-color: rgb(233, 230, 230);
-    margin-right: 100%
+    margin-right: 100%;
    
 }
 
@@ -1128,4 +1128,6 @@ span a:hover{
     margin-bottom: 20px;
   }
 }
+
+
 
