@@ -1,22 +1,26 @@
-import parcels from "../models/parcels";
+import ParcelModel from '../models/Parcel';
+
+const Parcel = new ParcelModel();
 
 /**
  * @exports
  * @class ParcelControl
  * 
  */
-class ParcelControl {
+class ParcelController {
     /**
      * @staticmethod
      * @param {object} req - Request object
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static getAllParcel (req,resp) {
+    static async getAllParcel (req,resp) {
+
+        const parcels = await Parcel.getAll();
         return resp.status(200).send({
             status: 'success',
             message: 'Parcels returned successfully',
-            parcels: parcels
+            parcels
         });
     }
 
@@ -26,8 +30,9 @@ class ParcelControl {
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static getSpecificParcel (req,resp) {
-        const parcel = parcels.find(c => c.id === parseInt(req.params.id));
+    static async getSpecificParcel (req,resp) {
+        const id = req.params.id;
+        const parcel = await Parcel.getOne(id);
         if (!parcel) {
             return resp.status(404).send({
                 status: 'error',
@@ -47,14 +52,15 @@ class ParcelControl {
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static getAllUsersParcels (req, resp) {    
-        const userId = Number(req.params.id);
-        const allParcels = parcels.filter(parcel => parcel.userId === userId); 
-                    return resp.status(200).json({
-                        status: 'success',
-                        message: 'All Parcel returned',
-                        parcels: allParcels
-                    });
+    static async getAUsersParcels (req, resp) {  
+        const userId = req.params.userId;  
+        const allParcels = await Parcel.getAUsersParcels(userId);
+
+        return resp.status(200).json({
+            status: 'success',
+            message: 'All Parcel returned',
+            parcels: allParcels
+        });
     }
 
      /**
@@ -63,22 +69,21 @@ class ParcelControl {
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static createParcel(req,resp) {
-       
-        const parcel = {
-            id: parcels.length + 1,
-            title: req.body.title,
-            price: req.body.price,
-            destination: req.body.destination,
-            pickUpLocation: req.body.pickUpLocation,
-            presentLocation: req.body.presentLocation,
-            status: req.body.status
-        };
-        parcels.push(parcel);
+    static async createParcel(req,resp) {
+        const parcelData = req.body;
+        parcelData.status = 'pending';
+        parcelData.weightMetric = '20k/g';
+        // if the user didn't enter the weight, and empty string should be used
+        parcelData.weight = parcelData.weight || "";
+        // temporary user id to be fetch from the jwt middleware 
+        parcelData.placedBy = 1;
+
+        const parcel = await Parcel.create(parcelData);
+
         return resp.status(201).send({
-            success: 'true',
+            success: 'true`',
             message: 'parcel created successfully', 
-            parcel: parcel
+            parcel
         });
     }
 
@@ -88,25 +93,21 @@ class ParcelControl {
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static cancelParcel (req,resp) {
-        const parcel = parcels.find(c => c.id === parseInt(req.params.id));
+    static async cancelParcel (req,resp) {
+        const id = req.params.id;
+        const parcel = await Parcel.getOne(id);
         if (!parcel) {
             return resp.status(404).json({
                 status: 'error',
                 message: 'No parcels exist for the id'
                     });
         }
-        if (!req.body.status) {
-            return resp.status(400).json({
-                status: 'error',
-                message: 'Status field required'
-                });
-        }
-        parcel.status = "cancelled";
+
+        const canceledParcel = await Parcel.cancelOrder(id);
         return resp.status(200).json({
             status: 'success',
-            message: 'Parcel successfully updated',
-            parcel: parcel
+            message: 'Parcel successfully cancelled',
+            parcel: canceledParcel
         });
     }
 
@@ -116,27 +117,24 @@ class ParcelControl {
      * @param {object} resp - Response object
      * @return {json} resp.json
      */
-    static changeParcelStatus (req,resp) {
-        const parcel = parcels.find(c => c.id === parseInt(req.params.id));
+    static async changeParcelStatus (req,resp) {
+        const id = req.params.id;
+        const parcel = await Parcel.getOne(id);
+
         if (!parcel) {
             return resp.status(404).json({
                 status: 'error',
                 message: 'No parcels exist for the id'
                     });
         }
-        if (!req.body.status) {
-            return resp.status(400).json({
-                status: 'error',
-                message: 'Status field required'
-                });
-        }
-        parcel.status = req.body.status;
+    
+        const updatedParcel = await Parcel.changeStatus(id, req.body.status);
         return resp.status(200).json({
             status: 'success',
-            message: 'Parcel successfully updated',
-            parcel: parcel
+            message: 'Status successfully changed',
+            parcel: updatedParcel
         });
     }
  }
 
-export default ParcelControl;
+export default ParcelController;
