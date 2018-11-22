@@ -12,7 +12,8 @@
     "migrate": "babel-node ./server/db/tables.js",
     "lint": "eslint \"server/**/*.js\" --fix",
     "test": "nyc mocha --require babel-core/register ./server/test/",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "heroku-postbuild": "npm run migrate"
   },
   "repository": {
     "type": "git",

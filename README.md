@@ -21,6 +21,8 @@ The following tools will be needed to run this application successfully:
 - POST /api/v1/parcels Users can create a new parcel
 - PUT //api/v1/parcels/:id Users can update the status of a parcel
 - GET /api/v1/users/:id/parcels Users gets all parcels of a single user
+- POST /api/v1/auth/signup Users can sign up
+- POST /api/v1/auth/login Users can login
 
 #### Installing ####
 
@@ -35,7 +37,7 @@ The following tools will be needed to run this application successfully:
 ### On Heroku ###
 - Pull the [develop](https://github.com/Rythae/send-it) branch off this repository
 - Run npm install to install all dependencies
-- Access endpoints on delivery-parcel.herokuapp.com
+- Access endpoints on (https://delivery-parcel.herokuapp.com)
 
 ### Running the tests ###
 
