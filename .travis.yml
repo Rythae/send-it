@@ -9,6 +9,7 @@ env:
  global:
  - NODE_ENV=test
 before_script:
+ - psql -c 'create database sendit_test;' -U postgres
  - npm install
 script:
  - nyc --reporter=lcov npm run test
