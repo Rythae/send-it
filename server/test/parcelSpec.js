@@ -73,7 +73,7 @@ describe('/PUT /api/v1/parcels/:id/status', () => {
             status: 'cancelled'
         };
         request(server)
-        .put('/api/v1/parcels/7/cancel')
+        .put('/api/v1/parcels/3/cancel')
         .send(status)
         .end((err,res) => {
             res.should.have.status(200);
