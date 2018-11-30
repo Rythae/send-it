@@ -1,20 +1,24 @@
 
 
 # send-it #
-Send it fast is a delivery service app for a courier
+
 [![Build Status](https://travis-ci.org/Rythae/send-it.svg?branch=develop)](https://travis-ci.org/Rythae/send-it)
 
-# **Getting Started** #
+# Send it #
+Send-it is a delivery app for a courier service
+
+## **Getting Started** ##
+
 ## **Clone the Repo.** ##
 Run npm install to install all necessary packages.
 
-Prerequisites
+### **Prerequisites** ###
 The following tools will be needed to run this application successfully:
 
-# Node v8.11.3 or above #
-# Npm v5.6 or above #
+## Node v8.11.3 or above ##
+## Npm v5.6 or above ##
 
-# ENDPOINTS $
+## ENDPOINTS ##
 
 - GET /api/v1/parcels/:id User can get a specific parcel based on the id passed
 - GET /api/v1/parcels/ User get all parcels 
@@ -37,7 +41,7 @@ The following tools will be needed to run this application successfully:
 ### On Heroku ###
 - Pull the [develop](https://github.com/Rythae/send-it) branch off this repository
 - Run npm install to install all dependencies
-- Access endpoints on (https://delivery-parcel.herokuapp.com)
+- Access endpoints on https://delivery-parcel.herokuapp.com
 
 ### Running the tests ###
 
@@ -50,7 +54,7 @@ The following tools will be needed to run this application successfully:
 
 ### Built With ###
 
-- Node.js - Runtime-Enviroment
+- [Node.js](https://nodejs.org/en/) - Runtime-Enviroment
 
 ### Authors ###
 
@@ -59,5 +63,5 @@ The following tools will be needed to run this application successfully:
 #### Acknowledgments ####
 
 - The Andela Team
-- google.com
+- [google.com](https://google.com)
 - Andela cycle 38
