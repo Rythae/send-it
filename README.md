@@ -3,8 +3,11 @@
 # send-it #
 
 [![Build Status](https://travis-ci.org/Rythae/send-it.svg?branch=develop)](https://travis-ci.org/Rythae/send-it)
-<a href="https://codeclimate.com/github/Rythae/send-it/maintainability"><img src="https://api.codeclimate.com/v1/badges/240c8f355613718fe16f/maintainability" /></a>
+
 [![Coverage Status](https://coveralls.io/repos/github/Rythae/send-it/badge.svg?branch=develop)](https://coveralls.io/github/Rythae/send-it?branch=develop)
+
+[![Maintainability](https://api.codeclimate.com/v1/badges/240c8f355613718fe16f/maintainability)](https://codeclimate.com/github/Rythae/send-it/maintainability)
+
 
 # Send it #
 Send-it is a delivery app for a courier service
