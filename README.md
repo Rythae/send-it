@@ -3,9 +3,7 @@
 # send-it #
 
 [![Build Status](https://travis-ci.org/Rythae/send-it.svg?branch=develop)](https://travis-ci.org/Rythae/send-it)
-
 [![Coverage Status](https://coveralls.io/repos/github/Rythae/send-it/badge.svg?branch=develop)](https://coveralls.io/github/Rythae/send-it?branch=develop)
-
 [![Maintainability](https://api.codeclimate.com/v1/badges/240c8f355613718fe16f/maintainability)](https://codeclimate.com/github/Rythae/send-it/maintainability)
 
 
@@ -20,10 +18,10 @@ Run npm install to install all necessary packages.
 ### **Prerequisites** ###
 The following tools will be needed to run this application successfully:
 
-## Node v8.11.3 or above ##
-## Npm v5.6 or above ##
+### Node v8.11.3 or above ###
+### Npm v5.6 or above ###
 
-## ENDPOINTS ##
+### ENDPOINTS ###
 
 - GET /api/v1/parcels/:id User can get a specific parcel based on the id passed
 - GET /api/v1/parcels/ User get all parcels 
