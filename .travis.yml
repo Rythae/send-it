@@ -10,13 +10,13 @@ env:
  - CC_TEST_REPORTER_ID=751688725919e988269b3ad92ea8090de7f82b798876056007b2b5d3f8a3ebd8
  - NODE_ENV=test
 before_script:
-- curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
-- chmod +x ./cc-test-reporter
-- ./cc-test-reporter before-build
+ - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+ - chmod +x ./cc-test-reporter
+ - ./cc-test-reporter before-build
  - psql -c 'create database sendit_test;' -U postgres
  - npm install
  - npm run migrate
 script:
  - nyc --reporter=lcov npm run test
 after_script:
-- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+ - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
