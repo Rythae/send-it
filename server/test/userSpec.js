@@ -12,9 +12,9 @@ describe('/POST /api/v1/auth/signup', () => {
         firstname: "Mary",
         lastname: "Smith",
         othernames: "Lucy",
-        email: "mary15lossy14@gmail.com",
+        email: "mary23lossy14@gmail.com",
         username: "marylosky",
-        password: "pass123457",
+        password: "passkeytt",
         isAdmin: 1
     }
     request(server)
@@ -207,8 +207,8 @@ describe('/POST /api/v1/auth/signup', () => {
     
         it('it should login a user', (done) => {
         const user = {
-            email: "mary15lossy14@gmail.com",
-            password: "pass1234567"
+            email: "mary23lossy14@gmail.com",
+            password: "passkeytt"
         }
         request(server)
             .post('/api/v1/auth/login')
