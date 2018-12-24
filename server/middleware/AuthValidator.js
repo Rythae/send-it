@@ -10,11 +10,26 @@ export const validateSignupInput =  (req, res, next) => {
         othernames,
         email,
         username,
+        password,
+        isAdmin,
     } = req.body;
     
    if (!req.body.firstname || !req.body.lastname || !req.body.username || !req.body.email || !req.body.password) {
       return res.status(400).send({'message': 'Some values are missing'});
     }
+    if (req.body.firstname.length < 3 ) {
+        return res.status(400).send({'message': 'firstame is below length'});
+      }
+      if (req.body.firstname.length > 10) {
+        return res.status(400).send({'message': 'firstname is above length'});
+      }
+      if (req.body.password.length > 10) {
+        return res.status(400).send({'message': 'Password is above length'});
+      }
+      if (req.body.password.length < 4) {
+        return res.status(400).send({'message': 'Password is below length'});
+      }
+
     if (!Helper.isValidEmail(req.body.email)) {
       return res.status(400).send({ 'message': 'Please enter a valid email address' });
     }
@@ -37,9 +52,18 @@ export const validateLoginInput =  (req, res, next) => {
    if (!email || !password) {
       return res.status(400).send({'message': 'missing email or password'});
     }
+    if (!Helper.hashPassword(password)) {
+        return res.status(401).send({'message': 'Password is incorrect'});
+      }
     if (!Helper.isValidEmail(email)) {
       return res.status(400).send({ 'message': 'Please enter a valid email address' });
     }
+    if (req.body.password.length > 10) {
+        return res.status(400).send({'message': 'Password is above length'});
+      }
+      if (req.body.password.length < 4) {
+        return res.status(400).send({'message': 'Password is below length'});
+      }
     const hashPassword = Helper.hashPassword(password);
 
     if (error.length > 0){
