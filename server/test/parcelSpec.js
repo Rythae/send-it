@@ -32,7 +32,7 @@ describe('/GET /api/v1/parcels/:id', () => {
 
     it('should return a 404 status when parcel not found', (done) => {
         request(server)
-        .get('/api/v1/parcels/73')
+        .get('/api/v1/parcels/151')
         .end((err,res) => {
             res.should.have.status(404);
             res.body.should.be.a('object');
@@ -59,7 +59,7 @@ describe('/PUT /api/v1/parcels/:id/status', () => {
             status: 'processing'
         };
         request(server)
-        .put('/api/v1/parcels/71/status')
+        .put('/api/v1/parcels/0/status')
         .send(status)
         .end((err,res) => {
             res.should.have.status(404);

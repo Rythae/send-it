@@ -47,9 +47,8 @@ export default class AuthController {
         }
 
         let passwordFound = Helper.comparePassword(userFound.password, req.body.password);
-
         if(!passwordFound) {
-            return resp.status(400).send({
+            return resp.status(401).send({
                 message: 'email or password is wrong', 
             });   
         }
@@ -58,8 +57,8 @@ export default class AuthController {
             id: userFound.id,
             email: userFound.email
         });
-
-        return resp.status(201).send({
+        
+        return resp.status(200).send({
             message: 'success', 
             data: {
                 id: userFound.id,
